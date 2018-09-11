@@ -23,6 +23,7 @@ ExportedObj/
 *.svd
 *.pdb
 *.vs
+*.blend1
 Tp1/Assets/Scripts/Playmode/Application/MainController.cs
 Tp1/Assets/Scripts/Playmode/Application/MainController.cs.meta
 
