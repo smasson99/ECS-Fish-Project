@@ -334,7 +334,7 @@ Canvas:
   m_GameObject: {fileID: 964752049}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b215f966fcf3154fad8968042b751e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfFishes: 1000
+  numberOfFishes: 10000
   fishesPrefab: {fileID: 1141489396598692, guid: 05ec46c2b7d3695448f5019d08ba2476,
     type: 2}
 --- !u!4 &1568128548
