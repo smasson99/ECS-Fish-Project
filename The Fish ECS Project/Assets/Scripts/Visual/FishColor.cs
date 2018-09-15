@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class FishColor : MonoBehaviour
 {
-    public SkinnedMeshRenderer fishMesh = null;
+  [Tooltip("The mesh to color.")]
+  [SerializeField]
+  private SkinnedMeshRenderer fishMesh = null;
+
+  public SkinnedMeshRenderer FishMesh
+  {
+    get => fishMesh;
+    private set => fishMesh = value;
+  }
 }

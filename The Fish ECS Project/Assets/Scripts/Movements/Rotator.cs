@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    public float speed = 2.8f;
+  [Tooltip("The speed to apply when the object rotates.")]
+  [SerializeField]
+  private float speed = 2.8f;
+
+  public float Speed
+  {
+    get => speed;
+    private set => speed = value;
+  }
 }

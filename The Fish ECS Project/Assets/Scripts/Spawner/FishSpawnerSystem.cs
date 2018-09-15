@@ -29,20 +29,20 @@ namespace Spawner
 
             foreach (FilterForSpawners entity in GetEntities<FilterForSpawners>())
             {
-                for (int i = 0; i < entity.FishSpawner.numberOfFishes; ++i)
+                for (int i = 0; i < entity.FishSpawner.NumberOfFishes; ++i)
                 {
-                    GameObject.Instantiate(entity.FishSpawner.fishesPrefab);
+                    GameObject.Instantiate(entity.FishSpawner.FishesPrefab);
                 }
             }
             foreach (FilterForFishes entity in GetEntities<FilterForFishes>())
             {
-                entity.FishColor.fishMesh.material.SetColor("_Color", COLORS[GetRandomColorIndex()]);
+                entity.FishColor.FishMesh.material.SetColor("_Color", COLORS[GetRandomColorIndex()]);
             }
         }
 
         protected override void OnUpdate()
         {
-        
+          //rien à faire
         }
     }
 }

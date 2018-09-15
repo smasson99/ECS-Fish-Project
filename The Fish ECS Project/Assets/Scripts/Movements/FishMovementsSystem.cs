@@ -23,7 +23,7 @@ namespace Movements
             {
                 entity.FishTargeter.targetPosition =
                     MathPositionUtils.
-                        Generate3DPointInLimits(entity.Transform.position, entity.FishGameLimits.limits);
+                        Generate3DPointInLimits(entity.Transform.position, entity.FishGameLimits.Limits);
             }
         }
 
@@ -31,26 +31,26 @@ namespace Movements
         {
             foreach (var entity in GetEntities<Filter>())
             {
-                entity.Transform.Translate(entity.Transform.root.forward * entity.Translator.speed * Time.deltaTime, 
+                entity.Transform.Translate(entity.Transform.root.forward * entity.Translator.Speed * Time.deltaTime, 
                     Space.World);
             
                 entity.Transform.position =
-                    MathPositionUtils.GetInRangePosition(entity.Transform.position, entity.FishGameLimits.limits);
+                    MathPositionUtils.GetInRangePosition(entity.Transform.position, entity.FishGameLimits.Limits);
             
             
                 Quaternion rotationQuaternion = Quaternion.LookRotation(entity.FishTargeter.targetPosition - 
                                                                         entity.Transform.position);
             
                 entity.Transform.rotation = Quaternion.Slerp(entity.Transform.rotation, rotationQuaternion,
-                    entity.Rotator.speed * Time.deltaTime);
+                    entity.Rotator.Speed * Time.deltaTime);
             
                 if (MathPositionUtils.IsNearTarget(entity.Transform.position, entity.FishTargeter.targetPosition,
                         NEAR_TARGET_RADIUS_VALUE) || 
-                    MathPositionUtils.IsNearLimits(entity.Transform.position, entity.FishGameLimits.limits, 5.6f))
+                    MathPositionUtils.IsNearLimits(entity.Transform.position, entity.FishGameLimits.Limits, 5.6f))
                 {
                     entity.FishTargeter.targetPosition =
                         MathPositionUtils.
-                            Generate3DPointInLimits(entity.Transform.position, entity.FishGameLimits.limits);
+                            Generate3DPointInLimits(entity.Transform.position, entity.FishGameLimits.Limits);
                 }
             }
         }

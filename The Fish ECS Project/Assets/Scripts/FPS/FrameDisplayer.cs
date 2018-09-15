@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class FrameDisplayer : MonoBehaviour
 {
-    public Text frameText = null;
-    public const string FRAME_TEXT = "FPS: ";
+  [Tooltip("The speed to apply when the object rotates.")]
+  [SerializeField]
+  private Text frameText = null;
+
+  public Text FrameText
+  {
+    get => frameText;
+    private set => frameText = value;
+  }
+
+  public const string FRAME_TEXT = "FPS: ";
 }
